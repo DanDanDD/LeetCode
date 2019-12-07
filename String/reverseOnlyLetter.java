@@ -40,7 +40,6 @@ class Solution {
             }
         }
         //指针没到头的话
-        sb.append(S.substring(pL,S.length()));
         return sb.toString();
     }
     public static boolean isOkchar(char c){
@@ -69,7 +68,7 @@ class Solution2 {
 public class reverseOnlyLetter {
     public static void main(String[] args) {
         String string = new String();
-        string = "abc-cd";
+        string = "ab-cde-qwer!";
         System.out.println(Solution.reverseOnlyLetters(string));
         System.out.println(Solution2.reverseOnlyLetters(string));
 
