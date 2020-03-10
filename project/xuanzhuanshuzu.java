@@ -17,7 +17,7 @@ public  class xuanzhuanshuzu {
             }
         }
     }
-
+//旋转数组
     public static void rotate2(int[] nums,int k){
         k %= nums.length;
         for (int i = 0; i < k; i++){
