@@ -19,20 +19,21 @@ package String;
 
 class Solution {
     public static String reverseOnlyLetters(String S) {
-        if(S.length() <= 1)return S;
+        if (S.length() <= 1) return S;
         //左右指针
-        int pL = 0; int pR = S.length() - 1;
+        int pL = 0;
+        int pR = S.length() - 1;
         StringBuilder sb = new StringBuilder();
         //移动指针
-        while(pL < S.length() && pR >= 0){
+        while (pL < S.length() && pR >= 0) {
             //如果左端不是字符
-            if(!isOkchar(S.charAt(pL))){
+            if (!isOkchar(S.charAt(pL))) {
                 sb.append(S.charAt(pL));
                 pL++;
                 //右端不是字符
-            }else if(!isOkchar(S.charAt(pR))){
+            } else if (!isOkchar(S.charAt(pR))) {
                 pR--;
-            }else{
+            } else {
                 //都是字符
                 sb.append(S.charAt(pR));
                 pL++;
@@ -42,7 +43,8 @@ class Solution {
         //指针没到头的话
         return sb.toString();
     }
-    public static boolean isOkchar(char c){
+
+    public static boolean isOkchar(char c) {
         return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
     }
 }
